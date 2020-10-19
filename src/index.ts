@@ -1,10 +1,10 @@
 'use strict';
 
-import {Console} from "./handler/console";
-import {Handler} from "./handler/handler";
-import {Formatter} from "./formatter/formatter";
-import {Text} from "./formatter/text";
-import {Record} from "./record";
+import { Console } from './handler/console';
+import { Handler } from './handler/handler';
+import { Formatter } from './formatter/formatter';
+import { Text } from './formatter/text';
+import { Record } from './record';
 
 let handler: Handler = new Console();
 let formatter: Formatter = new Text();
@@ -31,5 +31,5 @@ export const enum Level {
 }
 
 export function log(level: Level, message: string, context?: object) {
-  handler.handle(new Record(message, context), formatter)
+  handler.handle(new Record(message, context), formatter);
 }
